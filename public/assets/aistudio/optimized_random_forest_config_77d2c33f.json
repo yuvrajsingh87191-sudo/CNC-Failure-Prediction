@@ -1,0 +1,21 @@
+{
+    "model_type": "RandomForestClassifier",
+    "hyperparameters": {
+        "n_estimators": 150,
+        "max_depth": null,
+        "min_samples_split": 5,
+        "random_state": 42
+    },
+    "features": [
+        "Temperature_Air",
+        "Temperature_Process",
+        "Rotational_Speed",
+        "Torque",
+        "Tool_Wear"
+    ],
+    "optimized_threshold": 0.26,
+    "risk_thresholds": {
+        "low_risk_limit": 0.15,
+        "critical_risk_limit": 0.26
+    }
+}

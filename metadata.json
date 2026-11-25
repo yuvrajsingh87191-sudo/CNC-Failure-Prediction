@@ -1,0 +1,6 @@
+{
+  "name": "CNC Machine Failure Prediction",
+  "description": "Industrial predictive-maintenance dashboard and Software Engineering demonstration for CNC Machine Failure Prediction using AI and ML (Group 8, NIIT University).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
