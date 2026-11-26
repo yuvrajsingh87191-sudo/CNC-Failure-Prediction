@@ -1,0 +1,20 @@
+{
+  "model_type": "RandomForestClassifier",
+  "n_estimators": 150,
+  "class_weight": "balanced",
+  "criterion": "gini",
+  "max_features": "sqrt",
+  "min_samples_split": 5,
+  "min_samples_leaf": 1,
+  "bootstrap": true,
+  "random_state": 42,
+  "optimized_threshold": 0.26,
+  "features": [
+    "Type",
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ]
+}
