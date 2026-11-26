@@ -1,0 +1,16 @@
+@startuml
+rectangle "User" as U
+rectangle "Web Dashboard" as D
+rectangle "Validation / API" as A
+rectangle "Random Forest\n150 trees" as M
+rectangle "Prediction History" as H
+rectangle "Analytics / CSV Export" as R
+U --> D : six readings
+D --> A : validated request
+A --> M : feature vector
+M --> A : probability + class
+A --> H : prediction record
+H --> D : recent history
+H --> R : history data
+R --> U : charts / CSV
+@enduml
