@@ -1,0 +1,13 @@
+@startuml
+node "User PC / Browser" {
+ component "CNC Failure Dashboard" as UI
+}
+node "Application Server" {
+ component "Prediction API" as API
+ component "Random Forest Model" as RF
+ component "History / Local Storage" as DB
+}
+UI --> API : HTTP/JSON
+API --> RF : prediction request
+API --> DB : save/read history
+@enduml
