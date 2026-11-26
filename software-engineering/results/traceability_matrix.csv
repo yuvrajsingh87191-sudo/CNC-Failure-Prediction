@@ -1,0 +1,16 @@
+Requirement,Design,Test/Evidence
+FR-01,Prediction UI,TC-33
+FR-02,InputValidator,TC-02..TC-15;TC-28;TC-36
+FR-03,FailurePredictor,TC-16..TC-24;TC-35
+FR-04,RiskLevel/result view,TC-16;TC-21;TC-24;TC-25;TC-34;TC-35
+FR-05,PredictionRepository,TC-27;TC-28;TC-38
+FR-06,History view,TC-29;TC-31;TC-38
+FR-07,Clear action,TC-37
+FR-08,Clear-history service,TC-30
+NFR-01,Performance,TC-26
+NFR-02,UI design,TC-33..TC-37
+NFR-03,Validation/exception handling,TC-14;TC-28;TC-36
+NFR-04,FailurePredictor interface,TC-32
+NFR-05,JDK 17+ prototype,Build/test evidence
+NFR-06,Privacy/security design,Design review
+NFR-07,ML evaluation,ML metrics
