@@ -1,0 +1,31 @@
+@startuml
+package model {
+ class SensorReading
+ class InputForm
+ class Prediction
+ class PredictionRecord
+ enum ProductType
+ enum RiskLevel
+}
+package service {
+ class InputValidator
+ interface FailurePredictor
+ class RuleBasedPredictor
+ class PredictionService
+ class InvalidInputException
+}
+package repository {
+ class PredictionRepository
+}
+package presentation {
+ class CncPredictorApp
+}
+FailurePredictor <|.. RuleBasedPredictor
+PredictionService --> InputValidator
+PredictionService --> FailurePredictor
+PredictionService --> PredictionRepository
+PredictionRepository --> PredictionRecord
+PredictionRecord --> SensorReading
+PredictionRecord --> Prediction
+CncPredictorApp --> PredictionService
+@enduml
