@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor "Maintenance Engineer" as ME
+actor "Production Supervisor" as PS
+rectangle "CNC Failure Predictor" {
+ usecase "UC-01 Predict machine failure" as UC1
+ usecase "UC-02 Validate readings" as UC2
+ usecase "UC-03 View prediction history" as UC3
+ usecase "UC-04 Reset input form" as UC4
+ usecase "UC-05 Clear prediction history" as UC5
+}
+ME --> UC1
+ME --> UC3
+ME --> UC4
+ME --> UC5
+PS --> UC3
+UC1 ..> UC2 : <<include>>
+@enduml
