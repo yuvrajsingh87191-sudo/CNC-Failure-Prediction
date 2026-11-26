@@ -1,0 +1,21 @@
+@startuml
+actor User
+participant "Dashboard/UI" as UI
+participant "Validator" as V
+participant "Prediction API / Engine" as M
+participant "History Store" as H
+User -> UI : Enter six readings
+User -> UI : Predict
+UI -> V : validate(readings)
+alt invalid
+ V --> UI : field errors
+ UI --> User : show errors
+else valid
+ V --> UI : validated reading
+ UI -> M : predict(reading)
+ M --> UI : probability + result + risk
+ UI -> H : save successful prediction
+ H --> UI : stored
+ UI --> User : result + advice
+end
+@enduml
