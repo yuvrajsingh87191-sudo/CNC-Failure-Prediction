@@ -1,0 +1,17 @@
+@startuml
+start
+:Enter Type + 5 readings;
+:Validate required/type/range rules;
+if (Valid?) then (yes)
+ :Call prediction engine;
+ :Get failure probability;
+ :Apply decision threshold;
+ :Assign risk level;
+ :Save prediction history;
+ :Display result and advice;
+else (no)
+ :Display all validation errors;
+ :Do not predict;
+endif
+stop
+@enduml
